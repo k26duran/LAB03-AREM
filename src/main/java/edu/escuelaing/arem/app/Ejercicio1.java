@@ -5,24 +5,21 @@ import java.net.*;
 
 
 public class Ejercicio1 {
+	
 	public static void main(String[] args) throws Exception {
-		URL google = new URL("http://www.google.com/");
+		URL url = new URL("https://github.com:443/k26duran");
 
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()))) {
-			String inputLine = null;
-			while ((inputLine = reader.readLine()) != null) {
-				//System.out.println(inputLine);
-			}
-			
-			System.out.println(google.getFile());
-			System.out.println(google.getAuthority());
-			System.out.println(google.getProtocol());
-			System.out.println(google.getPath());
-			System.out.println(google.getHost());
-			System.out.println(google.getPort());
-			System.out.println(google.getQuery());
-			System.out.println(google.getFile());
-			System.out.println(google.getRef());
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
+		
+			System.out.println(url.getFile());
+			System.out.println(url.getAuthority());
+			System.out.println(url.getProtocol());
+			System.out.println(url.getPath());
+			System.out.println(url.getHost());
+			System.out.println(url.getPort());
+			System.out.println(url.getQuery());
+			System.out.println(url.getFile());
+			System.out.println(url.getRef());
 			
 			
 

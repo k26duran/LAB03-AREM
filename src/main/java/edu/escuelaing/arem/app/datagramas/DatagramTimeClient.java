@@ -20,7 +20,7 @@ public class DatagramTimeClient implements Runnable{
 	@Override
 	public void run() {
 		while (true) {
-			byte[] sendBuf = new byte[256];
+
 			try {	
 				byte[] buf = new byte[256];
 				InetAddress address = InetAddress.getByName("127.0.0.1");
